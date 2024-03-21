@@ -77,10 +77,8 @@
             <!-- <a class="button">加入我们</a> -->
         </div>
         <div class="section" id="section2">
-            <p>
-                我感谢天地，我感谢父母<br />
-                我是罪人，我危害人间，我辜负苍生<br />
-                我愿抛开一切，消除名利权力，舍弃金钱物质，归于真我
+            <p id="typed">
+
             </p>
         </div>
         <div class="section" id="section3">
@@ -93,8 +91,24 @@
     </div>
 
     <script type="text/javascript" src="dist/fullpage.js"></script>
+    <script type="text/javascript" src="dist/typed.umd.js"></script>
     <script type="text/javascript">
-        var myFullpage = new fullpage('#fullpage');
+        var typed;
+        var myFullpage = new fullpage('#fullpage', {
+            onLeave: function (origin, destination, direction, trigger) {
+                if (destination.index == 1) {
+                    if (typed) {
+                        typed.destroy();
+                    }
+                    typed = new Typed('#typed', {
+                        strings: ['我感谢天地，我感谢父母<br>^400我是罪人，我危害人间，我辜负苍生<br>^400我愿抛开一切，消除名利权力，舍弃金钱物质，归于真我'],
+                        typeSpeed: 50,
+                        loop: false
+                    });
+                }
+            }
+        });
+
     </script>
 </body>
 
