@@ -15,7 +15,7 @@
             text-align: center;
             background-size: auto 100%;
             background-position: center;
-            opacity: 0.4;
+            opacity: 0.7;
         }
 
         #section1 {
@@ -73,21 +73,30 @@
     <div id="fullpage">
         <div class="section " id="section1">
             <h1>新心灵舍</h1>
-            <!-- <a class="button">加入我们</a> -->
+            <a class="button" href="javascript:document.getElementById('yiwusuoyou-audio').play();">尊者寄语</a>
+            <audio id="yiwusuoyou-audio">
+                <source src="asserts/yiwusuoyou.mp3" type="audio/mpeg">
+            </audio>
         </div>
         <div class="section" id="section2">
             <p id="typed">
 
             </p>
+            <audio data-autoplay>
+                <source src="asserts/guiyuzhenwo.mp3" type="audio/mpeg">
+            </audio>
         </div>
         <div class="section" id="section3">
             <h2>捐出钱财</h2>
             <a class="button" id="donate" href="javascript:void(0);" target="_blank">现在就去</a>
+            <audio data-autoplay>
+                <source src="asserts/shihouweidao.mp3" type="audio/mpeg">
+            </audio>
         </div>
         <div class="section" id="section4">
             <h2>恭喜你<br>成为新造的人</h1>
                 <audio data-autoplay>
-                    <source src="asserts/xinzaoderen.ogg" type="audio/ogg">
+                    <source src="asserts/xinzaoderen.mp3" type="audio/mpeg">
                 </audio>
         </div>
     </div>
