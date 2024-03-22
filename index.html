@@ -82,7 +82,7 @@
         </div>
         <div class="section" id="section3">
             <h2>捐出钱财</h2>
-            <a class="button" href="https://gongyi.qq.com/succor/project_list.htm" target="_blank">现在就去</a>
+            <a class="button" id="donate" href="javascript:void(0);" target="_blank">现在就去</a>
         </div>
         <div class="section" id="section4">
             <h2>恭喜你<br>成为新造的人</h1>
@@ -94,7 +94,9 @@
 
     <script type="text/javascript" src="dist/fullpage.js"></script>
     <script type="text/javascript" src="dist/typed.umd.js"></script>
+    <script type="text/javascript" src="dist/isMobile.min.js"></script>
     <script type="text/javascript">
+        document.getElementById('donate').setAttribute("href", isMobile.phone ? "https://ssl.gongyi.qq.com/cate/index.html" : "https://gongyi.qq.com/succor/project_list.htm");
         var typed;
         var myFullpage = new fullpage('#fullpage', {
             onLeave: function (origin, destination, direction, trigger) {
