@@ -7,75 +7,18 @@
     <meta name="author" content="新造的人" />
     <meta name="description" content="新造的人" />
     <meta name="keywords" content="新造的人" />
-    <meta name="Resource-type" content="Document" />
 
-    <link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
-    <style>
-        .section {
-            text-align: center;
-            background-size: auto 100%;
-            background-position: center;
-            opacity: 0.7;
-        }
-
-        #section1 {
-            background-image: url(images/001.jpg);
-        }
-
-        #section2 {
-            background-image: url(images/002.jpg);
-        }
-
-        #section3 {
-            background-image: url(images/003.jpg);
-
-        }
-
-        #section4 {
-            background-image: url(images/004.jpg);
-        }
-
-        .fp-watermark {
-            display: none;
-        }
-
-        h1 {
-            font-size: 200px;
-            color: #fff;
-        }
-
-        h2 {
-            font-size: 150px;
-            color: #fff;
-            line-height: 1.4;
-        }
-
-        .button {
-            border-radius: 5px;
-            display: inline-block;
-            color: #222;
-            background: #fff;
-            padding: 30px 50px;
-            text-decoration: none;
-        }
-
-        p {
-            font-size: 60px;
-            color: #fff;
-            font-weight: bold;
-            line-height: 1.6;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="dist/fullpage.min.css" />
+    <link rel="stylesheet" type="text/css" href="dist/index.css" />
 </head>
 
 <body>
-
     <div id="fullpage">
         <div class="section " id="section1">
             <h1>新心灵舍</h1>
             <a class="button" href="javascript:document.getElementById('yiwusuoyou-audio').play();">尊者寄语</a>
             <audio id="yiwusuoyou-audio">
-                <source src="asserts/yiwusuoyou.mp3" type="audio/mpeg">
+                <source src="assets/yiwusuoyou.mp3" type="audio/mpeg">
             </audio>
         </div>
         <div class="section" id="section2">
@@ -83,46 +26,28 @@
 
             </p>
             <audio data-autoplay>
-                <source src="asserts/guiyuzhenwo.mp3" type="audio/mpeg">
+                <source src="assets/guiyuzhenwo.mp3" type="audio/mpeg">
             </audio>
         </div>
         <div class="section" id="section3">
             <h2>捐出钱财</h2>
             <a class="button" id="donate" href="javascript:void(0);" target="_blank">现在就去</a>
             <audio data-autoplay>
-                <source src="asserts/shihouweidao.mp3" type="audio/mpeg">
+                <source src="assets/shihouweidao.mp3" type="audio/mpeg">
             </audio>
         </div>
         <div class="section" id="section4">
             <h2>恭喜你<br>成为新造的人</h1>
                 <audio data-autoplay>
-                    <source src="asserts/xinzaoderen.mp3" type="audio/mpeg">
+                    <source src="assets/xinzaoderen.mp3" type="audio/mpeg">
                 </audio>
         </div>
     </div>
 
-    <script type="text/javascript" src="dist/fullpage.js"></script>
+    <script type="text/javascript" src="dist/fullpage.min.js"></script>
     <script type="text/javascript" src="dist/typed.umd.js"></script>
     <script type="text/javascript" src="dist/isMobile.min.js"></script>
-    <script type="text/javascript">
-        document.getElementById('donate').setAttribute("href", isMobile.phone ? "https://ssl.gongyi.qq.com/cate/index.html" : "https://gongyi.qq.com/succor/project_list.htm");
-        var typed;
-        var myFullpage = new fullpage('#fullpage', {
-            onLeave: function (origin, destination, direction, trigger) {
-                if (destination.index == 1) {
-                    if (typed) {
-                        typed.destroy();
-                    }
-                    typed = new Typed('#typed', {
-                        strings: ['我感谢天地，我感谢父母<br>^400我是罪人，我危害人间，我辜负苍生<br>^400我愿抛开一切，消除名利权力，舍弃金钱物质，归于真我'],
-                        typeSpeed: 50,
-                        loop: false
-                    });
-                }
-            }
-        });
-
-    </script>
+    <script type="text/javascript" src="dist/index.js"></script>
 </body>
 
 </html>

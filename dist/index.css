@@ -1,0 +1,55 @@
+.section {
+    text-align: center;
+    background-size: auto 100%;
+    background-position: center;
+    opacity: 0.7;
+}
+
+#section1 {
+    background-image: url(../images/001.jpg);
+}
+
+#section2 {
+    background-image: url(../images/002.jpg);
+}
+
+#section3 {
+    background-image: url(../images/003.jpg);
+
+}
+
+#section4 {
+    background-image: url(../images/004.jpg);
+}
+
+.fp-watermark {
+    display: none;
+}
+
+h1 {
+    font-size: 200px;
+    color: #fff;
+}
+
+h2 {
+    font-size: 150px;
+    color: #fff;
+    line-height: 1.4;
+}
+
+.button {
+    border-radius: 10px;
+    display: inline-block;
+    color: #222;
+    background: #fff;
+    padding: 30px 50px;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+p {
+    font-size: 60px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.6;
+}
